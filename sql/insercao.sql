@@ -31,30 +31,29 @@ SELECT   CAST(data_inversa AS DATE),
 FROM raw.acidentes
 WHERE data_inversa >= '01-01-2021' 
 
-DELETE FROM datawarehouse.dim_tempo 
+-- DELETE FROM datawarehouse.dim_tempo 
 INSERT INTO datawarehouse.dim_tempo (dia_semana, horario, fase_dia)
 SELECT DISTINCT dia_semana, horario, fase_dia
 FROM staging.acidentes;
 
-DELETE FROM datawarehouse.dim_localizacao
+-- DELETE FROM datawarehouse.dim_localizacao
 INSERT INTO datawarehouse.dim_localizacao (uf, br, km, municipio, regional)
 SELECT DISTINCT uf, br, km, municipio, regional
 FROM staging.acidentes;
 --80491
 
-DELETE FROM datawarehouse.dim_pista
+-- DELETE FROM datawarehouse.dim_pista
 INSERT INTO datawarehouse.dim_pista (sentido_via, tipo_pista, tracado_via)
 SELECT DISTINCT sentido_via, tipo_pista, tracado_via
 FROM staging.acidentes; --85 LINHAS
 
-DELETE FROM datawarehouse.dim_acidente
+-- DELETE FROM datawarehouse.dim_acidente
 INSERT INTO datawarehouse.dim_acidente (causa_acidente, tipo_acidente, classificacao_acidente)
 SELECT DISTINCT causa_acidente, tipo_acidente, classificacao_acidente
 FROM staging.acidentes; --2845 LINHAS
 
 
-
-DELETE FROM datawarehouse.fato_acidentes 
+-- DELETE FROM datawarehouse.fato_acidentes 
 INSERT INTO datawarehouse.fato_acidentes 
 (   
 	id_acidente,
