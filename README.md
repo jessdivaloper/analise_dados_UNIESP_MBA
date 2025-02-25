@@ -56,6 +56,7 @@ A base de dados inicial contém aproximadamente 173.121 mil registros e foi disp
 Um esquema em estrela é um modelo multidimensional que organiza os dados em um banco de dados para torná-los mais fáceis de entender e analisar. O design do esquema em estrela é otimizado para consultar grandes conjuntos de dados.
 
 
+![modelagem_dimensional](https://github.com/user-attachments/assets/a2dae541-f3ee-4bbc-ad6e-c8a4e9a12244)
 
 
 ## 📊 Storytelling e Análises
@@ -73,6 +74,8 @@ A partir dessas análises, o projeto busca fornecer insights valiosos que podem 
 
 ## Power BI
 
-![alt text](img\dashboard1.PNG)
-![alt text](img\dashboard2.PNG)
+
+![dashboard1](https://github.com/user-attachments/assets/c4f23e53-f90b-4d4b-b18b-78a70243ca1f)
+
+![dashboard2](https://github.com/user-attachments/assets/5185eece-0f82-4d08-976c-a2519109cbc0)
 
