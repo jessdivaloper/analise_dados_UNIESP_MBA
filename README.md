@@ -2,22 +2,21 @@
 
 ## 📌 Descrição do Projeto
 
-Este projeto tem como objetivo a construção de um Data Warehouse para análise dos acidentes de trânsito registrados no Brasil entre 2021 e 2023. A solução utiliza Python e Pandas para realizar o ETL (extração, transformação e carga dos dados) e o PostgreSQL para armazenamento estruturado. A visualização e análise dos dados são feitas no Power BI.
+Este projeto tem como objetivo a construção de um Data Warehouse para análise dos acidentes de trânsito registrados no Brasil entre 2021 e 2023. A solução utiliza Pentaho, Python e Pandas para realizar o ETL (extração, transformação e carga dos dados) e o PostgreSQL para armazenamento estruturado. A visualização e análise dos dados são feitas no Power BI.
 
 A base de dados inicial contém aproximadamente 173.121 mil registros e foi disponibilizada em formato CSV no site [Kaggle](https://www.kaggle.com/datasets/mlippo/car-accidents-in-brazil-2017-2023). O projeto segue uma abordagem baseada em modelagem dimensional, utilizando tabelas fato e dimensões para facilitar a análise dos dados.
 
 
 ## 🎯 Objetivos
 
-- Criar um ambiente estruturado para análise de dados de acidentes de trânsito.
-- Implementar um pipeline ETL eficiente utilizando Python e Pandas.
-- Modelar um Data Warehouse utilizando PostgreSQL.
+- Implementar um pipeline ETL eficiente utilizando Pentaho e PostgreSQL.
+- Modelar um Data Warehouse utilizando o Pentaho PostgreSQL.
 - Criar dashboards interativos e informativos no Power BI.
 
 ## 🔧 Tecnologias Utilizadas
 
-- Python → Processamento e transformação dos dados
-- Pandas → Manipulação e limpeza dos dados
+- Python → Inserção dos dados no banco de dados
+- Pentaho → Integração com o banco de dados, criação do pipeline que limpa e transforma os dados. Os dados são modelados de acordo com o *star schema* e são inseridos no banco de dados.
 - PostgreSQL → Armazenamento dos dados no Data Warehouse
 - Power BI → Visualização e análise dos dados
 
@@ -31,7 +30,7 @@ A base de dados inicial contém aproximadamente 173.121 mil registros e foi disp
     - Ingestão dos dados na tabela *raw.acidentes*. 
 
 2) **Transformação de dados:**
-    
+    - O processo de transformação foi realizado utilizando Pentaho Data Integration
     - Após a ingestão dos dados o próximo passo foi transformar o tipo dos dados como datas e numéricos e inserir eles na tabela *staging.acidentes*
     - [Um script SQL]() foi usado para remover as linhas duplicadas
     - As colunas *data_inversa* e *tipo_acidente* não podem ser vazias ou nulas pois são essenciais para o registro, por isso, a validação foi [realizada via SQL]().
@@ -53,16 +52,25 @@ A base de dados inicial contém aproximadamente 173.121 mil registros e foi disp
 
 ## Modelagem Dimensional - Esquema Estrela
 
-Um esquema em estrela é um modelo multidimensional que organiza os dados em um banco de dados para torná-los mais fáceis de entender e analisar. O design do esquema em estrela é otimizado para consultar grandes conjuntos de dados.
+Um esquema em estrela é um modelo multidimensional que organiza os dados em um banco de dados para torná-los mais fáceis de entender e analisar. O design do esquema em estrela é otimizado para consultar grandes conjuntos de dados. A imagem abaixo ilustra os dados após a modelagem.
 
-
+![alt text](img\modelagem_dimensional.PNG)
 
 
 ## 📊 Storytelling e Análises
 
-Os dados analisados ajudarão a responder perguntas como:
+Os dados analisados ajudaram a responder as perguntas abaixo:
 
 1) Quais estados brasileiros registraram mais acidentes ao longo dos anos?
+
+    Os estados que apresentam maior quantidade de acidentes são 
+    - 2021: MG
+            SC
+            PR
+            
+    - 2022:
+    - 2023:
+
 2) Qual o impacto das condições climáticas na quantidade de acidentes?
 3) Há um padrão entre horário/dia da semana e número de acidentes?
 4) Quais são os tipos de acidentes mais frequentes?
