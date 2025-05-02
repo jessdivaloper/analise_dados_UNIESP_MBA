@@ -36,13 +36,13 @@ A base de dados inicial contém 463.152 mil registros de 2017 até 2023 e foi di
 
     - **criando_fato**.ktr: constrói uma tabela temporária com os dados brutos e adicionando as chaves estrangeiras id_tempo, id_localizacao e id_pista, obtidas das tabelas dimensionais. Em seguida, gera a tabela fato_acidentes, contendo apenas os IDs dimensionais e os atributos quantitativos, descartando as colunas redundantes.
 
-        ![alt text](img/pentaho_dimensoes.PNG)
+        ![alt text](img/pentaho_dimensoes.png)
 
     Execução utilizando um JOB
     [Job Transito Brasil]('pentaho/job_transito_brasil.kjb')
 
     
-    ![alt text](img/pentaho_job.PNG)
+    ![alt text](img/pentaho_job.png)
     
 3) **Modelagem Dimensional - Esquema Estrela**
 
@@ -80,6 +80,6 @@ Os dados analisados ajudaram a responder as perguntas abaixo:
 ## Power BI
 
 
-![dashboard1](img/dashboard1.png)
-![dashboard2](img/dashboard2.png)
+![dashboard1](img/dashboard1.PNG)
+![dashboard2](img/dashboard2.PNG)
 
