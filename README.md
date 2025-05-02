@@ -36,25 +36,25 @@ A base de dados inicial contém 463.152 mil registros de 2017 até 2023 e foi di
 
     - **criando_fato**.ktr: constrói uma tabela temporária com os dados brutos e adicionando as chaves estrangeiras id_tempo, id_localizacao e id_pista, obtidas das tabelas dimensionais. Em seguida, gera a tabela fato_acidentes, contendo apenas os IDs dimensionais e os atributos quantitativos, descartando as colunas redundantes.
 
-        ![alt text](img\pentaho_dimensoes.PNG)
+        ![alt text](img/pentaho_dimensoes.PNG)
 
     Execução utilizando um JOB
-    [Job Transito Brasil]('pentaho\job_transito_brasil.kjb')
+    [Job Transito Brasil]('pentaho/job_transito_brasil.kjb')
 
     
-    ![alt text](img\pentaho_job.PNG)
+    ![alt text](img/pentaho_job.PNG)
     
 3) **Modelagem Dimensional - Esquema Estrela**
 
     Um esquema em estrela é um modelo multidimensional que organiza os dados em um banco de dados para torná-los mais fáceis de entender e analisar. O design do esquema em estrela é otimizado para consultar grandes conjuntos de dados. A imagem abaixo ilustra os dados após a modelagem.
 
-    ![alt text](img\modelagem_dimensional.PNG)
+    ![alt text](img/modelagem_dimensional.PNG)
 
 3) **Análises de dados iniciais utilizando Python**
 
     O Pandas foi utilizado nas análises iniciais para realizar a leitura, exploração, limpeza e tratamento dos dados, permitindo uma compreensão prévia dos padrões e inconsistências no dataset. 
 
-    O [notebook](notebooks\analises_gerais.ipynb) com todo o processo de análise, tratamento e modelagem dos dados pode ser consultado para acompanhar as etapas realizadas de forma detalhada e reproduzível.
+    O [notebook](notebooks/analises_gerais.ipynb) com todo o processo de análise, tratamento e modelagem dos dados pode ser consultado para acompanhar as etapas realizadas de forma detalhada e reproduzível.
 
 ## 📊 Storytelling e Análises
 
@@ -77,12 +77,9 @@ Os dados analisados ajudaram a responder as perguntas abaixo:
     4) Quais são os tipos de acidentes mais frequentes?
 
 
-
-[Arquivos SQL](carregar_dados.ipynb)
-
 ## Power BI
 
 
-![dashboard1](img\dashboard1.png)
-![dashboard2](img\dashboard2.png)
+![dashboard1](img/dashboard1.png)
+![dashboard2](img/dashboard2.png)
 
