@@ -38,7 +38,7 @@ A base de dados inicial contém 463.152 mil registros de 2017 até 2023 e foi di
 
         ![alt text](img/pentaho_dimensoes.png)
 
-    As transformações criadas no Pentaho foram executadas de forma sequencial por meio da funcionalidade de [Job]('pentaho/job_transito_brasil.kjb') da própria ferramenta.
+    As transformações criadas no Pentaho foram executadas de forma sequencial por meio da funcionalidade de [Job]('pentaho/job_transito_brasil2.kjb') da própria ferramenta.
 
 
     
@@ -57,18 +57,14 @@ A base de dados inicial contém 463.152 mil registros de 2017 até 2023 e foi di
     O [notebook](notebooks/analises_gerais.ipynb) com todo o processo de análise, tratamento e modelagem dos dados pode ser consultado para acompanhar as etapas realizadas de forma detalhada e reproduzível.
 
 
-## 📊 Análises de Dados
+## 📊  Dashboard de Acidentes de Trânsito – Causas, Locais e Total de Falidades
 
 Nesta seção, os dados tratados e modelados foram explorados por meio de visualizações interativas desenvolvidas no Power BI. O objetivo é transformar informações técnicas em narrativas visuais claras e acessíveis, destacando padrões, tendências e comportamentos relevantes. Os dashboards permitem uma análise dinâmica, facilitando a interpretação dos dados e apoiando a tomada de decisões estratégicas com base em evidências.
-
-
-## Dashboard de Acidentes de Trânsito – Causas, Locais e Total de Falidades
 
 - Número de ocorrências por dia de semana
 - Número de ocorrências, fatalidades, feridos graves e feridos leves por ano
 - Número de ocorrências, fatalidades, feridos graves e feridos leves por estado
 - Número de fatalidades por tipo de acidente 
-
 
 
 ![dashboard1](img/dashboard_v2a.PNG)
